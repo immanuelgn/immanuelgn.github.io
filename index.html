@@ -24,101 +24,108 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1 class="title">Immanuel<br />Gnanaseelan</h1>
-        <p class="subtitle">Software Engineering Student @ Toronto Metropolitan University</p>
-        <p class="lead">
-          Building reliable, scalable, and efficient systems with modern software tools.
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="title">Immanuel<br />Gnanaseelan</h1>
+          <p class="subtitle">Software Engineering Student @ Toronto Metropolitan University</p>
+          <p class="lead">Building reliable, scalable, and efficient systems with modern software tools.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="avatar" aria-label="Profile photo">
+          <!-- Put your real photo here (or keep placeholder.jpg) -->
+          <img src="Assets/professionalPicture.jpg" alt="Immanuel Gnanaseelan" />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="h2">About</h2>
+        <p class="text">
+          I’m a fourth-year Software Engineering student at Toronto Metropolitan University with hands-on experience across
+          software systems, data structures, digital systems, and full-stack development. I’ve built projects using Java, C#,
+          Python, SQL, JavaScript, VHDL, AWS S3, Git/GitHub, and Jira.
         </p>
-        <a class="btn" href="#projects">View Projects</a>
+        <p class="text">
+          I’m focused on reliability, performance, and clean engineering design, and I’ve also worked in QA testing for
+          enterprise applications—validating functionality across devices, documenting issues clearly, and collaborating with teams to improve quality.
+        </p>
       </div>
+    </section>
 
-      <div class="avatar" aria-label="Profile photo">
-        <img src="placeholder.jpg" alt="Immanuel Gnanaseelan" />
+    <!-- SKILLS -->
+    <section id="skills" class="section surface">
+      <div class="container">
+        <h2 class="h2">Skills</h2>
+        <div class="grid skills">
+          <div class="chip">Java</div>
+          <div class="chip">C#</div>
+          <div class="chip">Python</div>
+          <div class="chip">SQL</div>
+          <div class="chip">JavaScript</div>
+          <div class="chip">VHDL</div>
+          <div class="chip">AWS (S3)</div>
+          <div class="chip">Git / GitHub</div>
+          <div class="chip">Jira</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="h2">About</h2>
-      <p class="text">
-        I’m a fourth-year Software Engineering student at Toronto Metropolitan University with hands-on experience across
-        software systems, data structures, digital systems, and full-stack development. I’ve built projects using Java, C#,
-        Python, SQL, JavaScript, VHDL, AWS S3, Git/GitHub, and Jira.
-      </p>
-      <p class="text">
-        I’m focused on reliability, performance, and clean engineering design, and I’ve also worked in QA testing for
-        enterprise applications—validating functionality across devices, documenting issues clearly, and collaborating with teams to improve quality.
-      </p>
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="h2">Projects</h2>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section surface">
-    <div class="container">
-      <h2 class="h2">Skills</h2>
-      <div class="grid skills">
-        <div class="chip">Java</div>
-        <div class="chip">C#</div>
-        <div class="chip">Python</div>
-        <div class="chip">SQL</div>
-        <div class="chip">JavaScript</div>
-        <div class="chip">VHDL</div>
-        <div class="chip">AWS (S3)</div>
-        <div class="chip">Git / GitHub</div>
-        <div class="chip">Jira</div>
+        <div class="project-grid">
+          <button class="card" data-modal="modal1" type="button">
+            <h3>Cloud Storage File Uploader (C# + AWS)</h3>
+            <p>Click to view project details →</p>
+          </button>
+
+          <button class="card" data-modal="modal2" type="button">
+            <h3>Clothing Retail Store DBMS (Java, Oracle, SQL, Swing/JDBC)</h3>
+            <p>Click to view project details →</p>
+          </button>
+
+          <button class="card" data-modal="modal3" type="button">
+            <h3>CPU + ALU Design (VHDL, FPGA)</h3>
+            <p>Click to view project details →</p>
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS (ONLY 3) -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="h2">Projects</h2>
-
-      <button class="card" data-modal="modal1" type="button">
-        <h3>Cloud Storage File Uploader (C# + AWS)</h3>
-        <p>Click to view project details →</p>
-      </button>
-
-      <button class="card" data-modal="modal2" type="button">
-        <h3>Clothing Retail Store DBMS (Java, Oracle, SQL, Swing/JDBC)</h3>
-        <p>Click to view project details →</p>
-      </button>
-
-      <button class="card" data-modal="modal3" type="button">
-        <h3>CPU + ALU Design (VHDL, FPGA)</h3>
-        <p>Click to view project details →</p>
-      </button>
-    </div>
-  </section>
-
-  <!-- RESUME -->
-  <section id="resume" class="section surface">
-    <div class="container">
-      <h2 class="h2">Resume</h2>
-      <p class="text muted">Download my resume:</p>
-      <a class="btn" href="Assets/MyResume.pdf" download>Download Resume</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="h2">Contact</h2>
-      <div class="contact">
-        <div>Email: <a href="mailto:ignanaseelan04@gmail.com">ignanaseelan04@gmail.com</a></div>
-        <div>Phone: 647-988-4767</div>
-        <div>LinkedIn: <a href="https://www.linkedin.com/in/immanuelgnanaseelan/" target="_blank" rel="noopener">Click Here</a></div>
-        <div>GitHub: <a href="https://github.com/immanuelgn" target="_blank" rel="noopener">github.com/immanuelgn</a></div>
+    <!-- RESUME -->
+    <section id="resume" class="section surface">
+      <div class="container">
+        <h2 class="h2">Resume</h2>
+        <p class="text muted">Download my resume:</p>
+        <a class="btn" href="Assets/MyResume.pdf" download>Download Resume</a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="h2">Contact</h2>
+        <div class="contact">
+          <div>Email: <a href="mailto:ignanaseelan04@gmail.com">ignanaseelan04@gmail.com</a></div>
+          <div>Phone: 647-988-4767</div>
+          <div>LinkedIn: <a href="https://www.linkedin.com/in/immanuelgnanaseelan/" target="_blank" rel="noopener">linkedin.com/in/immanuelgnanaseelan</a></div>
+          <div>GitHub: <a href="https://github.com/immanuelgn" target="_blank" rel="noopener">github.com/immanuelgn</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- MODAL 1 -->
   <div class="modal" id="modal1" aria-hidden="true">
