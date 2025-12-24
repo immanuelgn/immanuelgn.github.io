@@ -1,81 +1,61 @@
 // Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener("click", (e) => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+    const target = document.querySelector(a.getAttribute("href"));
     if (target) target.scrollIntoView({ behavior: "smooth" });
   });
 });
 
-// Helpers to stop media
-function stopMedia(modal) {
-  // Stop videos
-  modal.querySelectorAll("video").forEach(v => {
-    try {
-      v.pause();
-      v.currentTime = 0;
-    } catch (_) {}
-  });
-
-  // Reset iframes (stops YouTube playback)
-  modal.querySelectorAll("iframe").forEach(f => {
+function stopEmbeds(modal) {
+  // Stop YouTube by resetting iframe src
+  modal.querySelectorAll("iframe").forEach((f) => {
     const src = f.getAttribute("src");
     f.setAttribute("src", src);
   });
 }
 
-// Open Modal
-function openModal(id) {
-  const modal = document.getElementById(id);
-  if (!modal) return;
-
-  modal.style.display = "block";
-  document.body.classList.add("modal-open");
+function openModal(modal) {
+  modal.style.display = "grid";
   modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
 }
 
-// Close Modal
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  if (!modal) return;
-
-  stopMedia(modal);
+function closeModal(modal) {
+  stopEmbeds(modal);
   modal.style.display = "none";
   modal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
+  document.body.style.overflow = "";
 }
 
-// Close if clicking outside modal content
-window.addEventListener("click", (event) => {
-  document.querySelectorAll(".modal").forEach(modal => {
-    if (event.target === modal) {
-      stopMedia(modal);
-      modal.style.display = "none";
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-    }
+// Open modal from project cards
+document.querySelectorAll("[data-modal]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const id = btn.getAttribute("data-modal");
+    const modal = document.getElementById(id);
+    if (modal) openModal(modal);
   });
 });
 
-// Close with ESC key
+// Close modal via X button
+document.querySelectorAll(".modal [data-close]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modal = btn.closest(".modal");
+    if (modal) closeModal(modal);
+  });
+});
+
+// Close modal by clicking background
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal(modal);
+  });
+});
+
+// Close on ESC
 window.addEventListener("keydown", (e) => {
   if (e.key !== "Escape") return;
-  document.querySelectorAll(".modal").forEach(modal => {
-    if (modal.style.display === "block") {
-      stopMedia(modal);
-      modal.style.display = "none";
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-    }
-  });
-});
-
-// Make project cards keyboard-activatable
-document.querySelectorAll(".project-card").forEach(card => {
-  card.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      card.click();
-    }
+  document.querySelectorAll(".modal").forEach((modal) => {
+    if (modal.style.display === "grid") closeModal(modal);
   });
 });

@@ -9,37 +9,35 @@
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
+  <!-- NAV -->
+  <header class="nav">
     <div class="nav-inner">
-      <div class="nav-left">IG</div>
-      <div class="nav-right">
+      <div class="brand">IG</div>
+      <nav class="links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- HOME / HERO SECTION -->
+  <!-- HERO -->
   <section id="home" class="hero">
     <div class="container hero-grid">
-      <div class="hero-content">
-        <h1 class="hero-title">Immanuel<br />Gnanaseelan</h1>
-        <h2 class="hero-role">Software Engineering Student @ Toronto Metropolitan University</h2>
-        <p class="hero-sub">
+      <div class="hero-copy">
+        <h1 class="title">Immanuel<br />Gnanaseelan</h1>
+        <p class="subtitle">Software Engineering Student @ Toronto Metropolitan University</p>
+        <p class="lead">
           Building reliable, scalable, and efficient systems with modern software tools.
         </p>
-        <a href="#projects" class="btn-primary">View My Work</a>
+        <a class="btn" href="#projects">View Projects</a>
       </div>
 
-      <div class="hero-photo">
-        <div class="photo-frame">
-          <img src="placeholder.jpg" alt="Your Photo" />
-        </div>
+      <div class="avatar" aria-label="Profile photo">
+        <img src="placeholder.jpg" alt="Immanuel Gnanaseelan" />
       </div>
     </div>
   </section>
@@ -47,127 +45,116 @@
   <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-
-      <p>
-        I’m a fourth-year Software Engineering student at Toronto Metropolitan University with a strong foundation in software systems,
-        data structures, digital systems, and full-stack development. Through coursework and projects, I’ve gained hands-on experience
-        with Java, C#, Python, SQL, JavaScript, VHDL, AWS S3, Git/GitHub, and Jira across both software and hardware contexts.
+      <h2 class="h2">About</h2>
+      <p class="text">
+        I’m a fourth-year Software Engineering student at Toronto Metropolitan University with hands-on experience across
+        software systems, data structures, digital systems, and full-stack development. I’ve built projects using Java, C#,
+        Python, SQL, JavaScript, VHDL, AWS S3, Git/GitHub, and Jira.
       </p>
-
-      <p>
-        I enjoy building clean, dependable applications and systems, and I’m especially interested in reliability, performance, and
-        thoughtful engineering design. I also have experience with QA testing for enterprise applications—validating functionality across
-        devices, documenting issues clearly, and collaborating with teams to improve product quality.
+      <p class="text">
+        I’m focused on reliability, performance, and clean engineering design, and I’ve also worked in QA testing for
+        enterprise applications—validating functionality across devices, documenting issues clearly, and collaborating with teams to improve quality.
       </p>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section section-surface">
+  <section id="skills" class="section surface">
     <div class="container">
-      <h2 class="section-title">Technical Skills</h2>
-
-      <div class="skills-grid">
-        <div class="skill-item">Java</div>
-        <div class="skill-item">C#</div>
-        <div class="skill-item">Python</div>
-        <div class="skill-item">SQL</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">VHDL</div>
-        <div class="skill-item">AWS (S3)</div>
-        <div class="skill-item">Git / GitHub</div>
-        <div class="skill-item">Jira</div>
+      <h2 class="h2">Skills</h2>
+      <div class="grid skills">
+        <div class="chip">Java</div>
+        <div class="chip">C#</div>
+        <div class="chip">Python</div>
+        <div class="chip">SQL</div>
+        <div class="chip">JavaScript</div>
+        <div class="chip">VHDL</div>
+        <div class="chip">AWS (S3)</div>
+        <div class="chip">Git / GitHub</div>
+        <div class="chip">Jira</div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS (ONLY 3) -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="h2">Projects</h2>
 
-      <div class="project-card" onclick="openModal('modal1')" role="button" tabindex="0">
+      <button class="card" data-modal="modal1" type="button">
         <h3>Cloud Storage File Uploader (C# + AWS)</h3>
-        <p class="click-text">Click to view project details →</p>
-      </div>
+        <p>Click to view project details →</p>
+      </button>
 
-      <div class="project-card" onclick="openModal('modal2')" role="button" tabindex="0">
+      <button class="card" data-modal="modal2" type="button">
         <h3>Clothing Retail Store DBMS (Java, Oracle, SQL, Swing/JDBC)</h3>
-        <p class="click-text">Click to view project details →</p>
-      </div>
+        <p>Click to view project details →</p>
+      </button>
 
-      <div class="project-card" onclick="openModal('modal3')" role="button" tabindex="0">
+      <button class="card" data-modal="modal3" type="button">
         <h3>CPU + ALU Design (VHDL, FPGA)</h3>
-        <p class="click-text">Click to view project details →</p>
-      </div>
+        <p>Click to view project details →</p>
+      </button>
     </div>
   </section>
 
   <!-- RESUME -->
-  <section id="resume" class="section section-surface">
+  <section id="resume" class="section surface">
     <div class="container">
-      <h2 class="section-title">Resume</h2>
-      <p class="muted">Download my full resume below:</p>
-      <!-- Your file is currently named MyResume.pdf inside Assets -->
-      <a href="Assets/MyResume.pdf" class="btn-primary" download>Download Resume</a>
+      <h2 class="h2">Resume</h2>
+      <p class="text muted">Download my resume:</p>
+      <a class="btn" href="Assets/MyResume.pdf" download>Download Resume</a>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact-grid">
-        <p>Email: <a href="mailto:ignanaseelan04@gmail.com">ignanaseelan04@gmail.com</a></p>
-        <p>Phone: 647-988-4767</p>
-        <p>Location: Scarborough, ON</p>
-        <p>GitHub: <a href="https://github.com/immanuelgn" target="_blank" rel="noopener">github.com/immanuelgn</a></p>
+      <h2 class="h2">Contact</h2>
+      <div class="contact">
+        <div>Email: <a href="mailto:ignanaseelan04@gmail.com">ignanaseelan04@gmail.com</a></div>
+        <div>Phone: 647-988-4767</div>
+        <div>Location: Scarborough, ON</div>
+        <div>GitHub: <a href="https://github.com/immanuelgn" target="_blank" rel="noopener">github.com/immanuelgn</a></div>
       </div>
     </div>
   </section>
 
-  <!-- MODALS -->
-
   <!-- MODAL 1 -->
-  <div id="modal1" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="close" onclick="closeModal('modal1')" aria-label="Close">&times;</button>
-      <h2>Cloud Storage File Uploader (C# + AWS)</h2>
+  <div class="modal" id="modal1" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="Cloud Storage File Uploader modal">
+      <button class="x" data-close aria-label="Close">&times;</button>
+      <h2 class="h2">Cloud Storage File Uploader (C# + AWS)</h2>
 
-      <div class="video-frame">
-        <!-- If you don’t have this file, remove the <video> block or add the file under Assets/ -->
-        <video class="demo-video" controls preload="metadata">
-          <source src="Assets/s3-demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div class="frame">
+        <p class="text muted" style="margin:0;">
+          Add screenshots or a YouTube demo here later (recommended so you don’t fight GitHub file limits).
+        </p>
       </div>
 
-      <p class="muted">
-        Windows Forms app using AWS SDK for .NET to upload files to Amazon S3 with status feedback and error handling.
+      <p class="text muted">
+        Windows Forms app using AWS SDK for .NET to upload files to S3 with status feedback and error handling.
       </p>
     </div>
   </div>
 
-  <!-- MODAL 2 (YouTube embed) -->
-  <div id="modal2" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="close" onclick="closeModal('modal2')" aria-label="Close">&times;</button>
-      <h2>Clothing Retail Store DBMS (Java, Oracle, SQL, Swing/JDBC)</h2>
+  <!-- MODAL 2 (YouTube demo) -->
+  <div class="modal" id="modal2" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="Retail DBMS modal">
+      <button class="x" data-close aria-label="Close">&times;</button>
+      <h2 class="h2">Clothing Retail Store DBMS (Java, Oracle, SQL, Swing/JDBC)</h2>
 
-      <div class="video-frame">
+      <div class="frame">
         <iframe
-          class="yt"
+          class="embed"
           src="https://www.youtube.com/embed/m1bHxPT8_Wk"
-          title="Clothing Retail Store DBMS Demo"
-          frameborder="0"
+          title="Retail DBMS Demo"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
 
-      <p class="muted">
+      <p class="text muted">
         BCNF-normalized Oracle database with constraints + sample data, and a Java Swing GUI using JDBC for schema management,
         CRUD workflows, table browsing, and report-style queries (joins + aggregation).
       </p>
@@ -175,23 +162,22 @@
   </div>
 
   <!-- MODAL 3 -->
-  <div id="modal3" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="close" onclick="closeModal('modal3')" aria-label="Close">&times;</button>
-      <h2>CPU + ALU Design (VHDL, FPGA)</h2>
+  <div class="modal" id="modal3" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="CPU + ALU modal">
+      <button class="x" data-close aria-label="Close">&times;</button>
+      <h2 class="h2">CPU + ALU Design (VHDL, FPGA)</h2>
 
-      <div class="video-frame">
-        <!-- If you don’t have this file, remove the <video> block or add the file under Assets/ -->
-        <video class="demo-video" controls preload="metadata">
-          <source src="Assets/fpga-demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div class="frame">
+        <p class="text muted" style="margin:0;">
+          Add screenshots or a YouTube demo here later.
+        </p>
       </div>
 
-      <p class="muted">
+      <p class="text muted">
         CPU architecture + ALU implemented in VHDL with FSM/control logic, registers, and verified on FPGA with output display.
       </p>
     </div>
   </div>
+
 </body>
 </html>
